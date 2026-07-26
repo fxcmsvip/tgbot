@@ -1,2 +1,0 @@
-# tgbot
-Telegram Bot Api
