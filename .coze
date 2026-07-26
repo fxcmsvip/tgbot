@@ -1,0 +1,23 @@
+[project]
+sub_id = "c2a0af9a"
+name = "AdminBot"
+requires = ["nodejs-24", "python-3.12"]
+project_type = "web"
+
+[preview]
+preview_enable = "enabled"
+
+[dev]
+build = ["bash", "AdminBot/ADMINCHAT_PANEL-main/frontend/scripts/coze-preview-build.sh"]
+run = ["bash", "AdminBot/ADMINCHAT_PANEL-main/frontend/scripts/coze-preview-run.sh"]
+
+[deploy]
+build = ["bash", "AdminBot/ADMINCHAT_PANEL-main/frontend/scripts/build.sh"]
+run = ["bash", "AdminBot/ADMINCHAT_PANEL-main/frontend/scripts/run.sh"]
+
+[deploy.profile]
+kind = "service"
+flavor = "web"
+
+[subprojects]
+path = ["AdminBot/ADMINCHAT_PANEL-main", "AdminBot/ACP_Market-main", "AdminBot/ACP_PLUGIN_SDK-main", "AdminBot/ACP_PLUGINS-main"]
